@@ -11,8 +11,6 @@ books = (books
     .withColumn("precio",   col("precio").cast(DoubleType()))
 )
 
-print("Esquema de libros")
-books.show(20)
 books.write.mode("overwrite").parquet("silver/books")
 
 print("Silver listo.")
