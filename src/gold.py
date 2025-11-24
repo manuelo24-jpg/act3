@@ -8,7 +8,6 @@ spark = SparkSession.builder.appName("gold").getOrCreate()
 
 books = spark.read.parquet("silver/books")
 
-# Mostrar algunas filas (show() ya imprime por sí mismo)
 books.show(5)
 
 # Estadísticas principales: media, máximo y mínimo de precio
